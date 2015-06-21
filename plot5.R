@@ -32,6 +32,6 @@ g <- ggplot(balt_motor, aes(factor(year), Emissions))
 g <- g + geom_bar(stat="identity") +
   xlab("year") +
   ylab("Total PM Emissions") +
-  ggtitle('Total Emissions from coal sources by year')
+  ggtitle('Total Emissions from Baltimore motor vehicle sources by year')
 print(g)
 dev.off()
