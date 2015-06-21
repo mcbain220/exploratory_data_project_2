@@ -14,9 +14,12 @@ SCC <- readRDS("Source_Classification_Code.rds")
 
 NEI <- left_join(NEI, SCC, by = c("SCC" = "SCC"))
 
-# Data Subsets
+# Data Subsets & aggregations
 
-# baltimore <- 
+total_by_year <- aggregate(Emissions ~ year, NEI, sum)
+
+
+baltimore <- NEI[NEI$fips == "24510"]
 
 
 # Questions to Address:
